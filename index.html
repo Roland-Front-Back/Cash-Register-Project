@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <div class="parent-container">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="parent-container">
         <div class="child-container">
-            <label for="cash">Enter customer's cash:</label>
-            <input type="number" name="customers-cash" class="cash" id="cash">
-            <button class="purchase-btn" id="purchase-btn">Purchase</button>
+          <label for="cash">Enter customer's cash:</label>
+          <input type="number" name="customers-cash" class="cash" id="cash" />
+          <button class="purchase-btn" id="purchase-btn">Purchase</button>
+          <p id="price"></p>
+          <p id="change"></p>
         </div>
-        <div class="result-container">
-            <span class="change-due" id="change-due"></span>
+
+        <div class="change-container">
+          <span class="change-due" id="change-due"></span>
         </div>
-    </div>
+        <div class="cash-in-drawer" id="cash-in-drawer"></div>
+      </div>
+    </main>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
