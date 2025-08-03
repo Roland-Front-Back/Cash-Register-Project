@@ -64,4 +64,4 @@ cash-register/
 
 ## 🌟 Acknowledgement
 
-- Cash accumulation icons created<a href="https://www.flaticon.com/free-icons/cash-accumulation" title="cash accumulation icons">by Zulkifly Suradin - Flaticon</a>
+- Cash accumulation icons created by<a href="https://www.flaticon.com/free-icons/cash-accumulation" title="cash accumulation icons"> Zulkifly Suradin - Flaticon</a>
