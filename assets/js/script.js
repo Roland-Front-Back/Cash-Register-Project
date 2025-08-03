@@ -3,7 +3,6 @@ let changeDueDisplay = document.getElementById("change-due");
 let purchaseButton = document.getElementById("purchase-btn");
 let cashDrawerDisplay = document.getElementById("cash-in-drawer");
 
-
 let price = 3.26;
 let cid = [
   ["PENNY", 1.01],
@@ -82,17 +81,27 @@ const checkTransaction = () => {
     return;
   }
 
-  const remainingCid = cidCopy.reduce((total, denomination) => total + denomination[1], 0);
+  const remainingCid = cidCopy.reduce(
+    (total, denomination) => total + denomination[1],
+    0
+  );
   if (remainingCid === 0) {
     changeDueDisplay.innerHTML =
       "Status: CLOSED " +
-      changeArr.map((denomination) => `${denomination[0]}: $${denomination[1].toFixed(2)}`).join(" ");
+      changeArr
+        .map(
+          (denomination) => `${denomination[0]}: $${denomination[1].toFixed(2)}`
+        )
+        .join(" ");
     cid = cid.map((denomination) => [denomination[0], 0]);
   } else {
     changeDueDisplay.innerHTML =
       "Status: OPEN <br><br>" +
       changeArr
-        .map((denomination) => `${denomination[0]}: $${denomination[1].toFixed(2)} <br>`)
+        .map(
+          (denomination) =>
+            `${denomination[0]}: $${denomination[1].toFixed(2)} <br>`
+        )
         .join(" ");
     cid = cidCopy;
   }
@@ -101,10 +110,13 @@ const checkTransaction = () => {
 };
 
 const updateCashDrawerDisplay = () => {
-    cashDrawerDisplay.innerHTML =
+  cashDrawerDisplay.innerHTML =
     "<h4>Cash in Drawer:</h4>" +
     cid
-      .map((denomination) => `${denomination[0]}: $${denomination[1].toFixed(2)} <br>`)
+      .map(
+        (denomination) =>
+          `${denomination[0]}: $${denomination[1].toFixed(2)} <br>`
+      )
       .reverse()
       .join("");
 };
